@@ -25,7 +25,7 @@ Quickstart (Demo Mode: In-Memory)
 - Dashboard: http://localhost:4000/dashboard
 - Consumer Portal: http://localhost:4000/consumer
 - Collectors App: http://localhost:4000/collectors
-- **Fabric Logs: http://localhost:4000/logs** (NEW!)
+- **Fabric Logs: http://localhost:4000/logs**
 - API: http://localhost:4000/api
 
 **See `DEMO_GUIDE.md` for complete demo instructions!**
