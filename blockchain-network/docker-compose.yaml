@@ -1,0 +1,28 @@
+version: '3.8'
+services:
+  orderer.example.com:
+    image: hyperledger/fabric-orderer:2.5
+    environment:
+      - FABRIC_LOGGING_SPEC=INFO
+    ports:
+      - 7050:7050
+    command: orderer
+
+  couchdb.farmers:
+    image: couchdb:3.3
+    ports: [ "5984:5984" ]
+
+  peer0.farmers.example.com:
+    image: hyperledger/fabric-peer:2.5
+    environment:
+      - CORE_LEDGER_STATE_STATEDATABASE=CouchDB
+      - CORE_LEDGER_STATE_COUCHDBCONFIG_COUCHDBADDRESS=couchdb.farmers:5984
+    ports:
+      - 7051:7051
+    command: peer node start
+
+  # Additional org peers can be modeled similarly for demo purposes
+
+
+
+

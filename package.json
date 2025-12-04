@@ -1,0 +1,36 @@
+{
+  "name": "ayurvedic-traceability-system",
+  "version": "1.0.0",
+  "description": "Blockchain-based botanical traceability system for Ayurvedic herbs",
+  "private": true,
+  "workspaces": [
+    "backend-api",
+    "consumer-portal",
+    "collectors-app",
+    "web-dashboard",
+    "fabric-logs-viewer",
+    "iot-gateway",
+    "chaincode"
+  ],
+  "scripts": {
+    "install:all": "npm install && cd backend-api && npm install && cd ../consumer-portal && npm install && cd ../collectors-app && npm install && cd ../web-dashboard && npm install && cd ../fabric-logs-viewer && npm install && cd ../iot-gateway && npm install && cd ../chaincode && npm install",
+    "build:all": "cd consumer-portal && npm run build && cd ../collectors-app && npm run build && cd ../web-dashboard && npm run build && cd ../fabric-logs-viewer && npm run build",
+    "start": "./start.sh",
+    "dev": "cd backend-api && npm run dev"
+  },
+  "engines": {
+    "node": ">=18.0.0",
+    "npm": ">=9.0.0"
+  },
+  "keywords": [
+    "blockchain",
+    "traceability",
+    "ayurvedic",
+    "hyperledger-fabric",
+    "supply-chain"
+  ],
+  "author": "",
+  "license": "MIT"
+}
+
+
